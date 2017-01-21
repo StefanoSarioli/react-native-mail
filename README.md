@@ -111,10 +111,11 @@ var MailExampleApp = React.createClass({
       body: '',
       isHTML: true, // iOS only, exclude if false
       attachment: {
-        path: '',  // The absolute path of the file from which to read data.
+        path: '',  // Absolute path or URI of the file from which to read data
         type: '',   // Mime Type: jpg, png, doc, ppt, html, pdf
         name: '',   // Optional: Custom filename for attachment
-      }
+      },
+      chooserLabel: '' // Android only, the label displayed on chooser
     }, (error, event) => {
         if(error) {
           AlertIOS.alert('Error', 'Could not send mail. Please send a mail to support@example.com');
