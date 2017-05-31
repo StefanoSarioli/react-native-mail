@@ -123,7 +123,7 @@ public class RNMailModule extends ReactContextBaseJavaModule {
       if (options.hasKey("chooserLabel") && !options.isNull("chooserLabel")) {
         chooserLabel = options.getString("chooserLabel");
       } else {
-        chooserLabel = "Send Mail";
+        chooserLabel = "Invia segnalazione";
       }
       Intent chooser = Intent.createChooser(i, chooserLabel);
       chooser.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
