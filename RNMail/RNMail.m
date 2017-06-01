@@ -1,7 +1,6 @@
 #import <MessageUI/MessageUI.h>
 #import "RNMail.h"
 #import "RCTConvert.h"
-#import "RCTLog.h"
 
 @implementation RNMail
 {
@@ -147,8 +146,6 @@ RCT_EXPORT_METHOD(mail:(NSDictionary *)options
                 break;
         }
         [_callbacks removeObjectForKey:key];
-    } else {
-        RCTLogWarn(@"No callback registered for mail: %@", controller.title);
     }
     UIViewController *ctrl = [[[[UIApplication sharedApplication] delegate] window] rootViewController];
     while (ctrl.presentedViewController && ctrl != controller) {
